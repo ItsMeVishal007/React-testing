@@ -10,11 +10,13 @@ function App() {
   return (
     <div>
       <input 
+        id="disable-Button-Checkbox"
         type="checkbox" 
         onClick={(e)=>{setIsChecked(e.target.checked)}}
       />
+      <label htmlFor="disable-Button-Checkbox">Disable Button</label>
       <button
-        style={{ backgroundColor: bgColor }}
+        style={{ backgroundColor: isChecked ? 'grey' : bgColor }}
         disabled={isChecked}
         onClick={()=>{
           setBgColor(background)
